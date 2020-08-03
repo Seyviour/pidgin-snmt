@@ -102,22 +102,6 @@ def remove_test_sentences():
 				f_train.write(prev_f_line + '\n')
 				e_train.write(prev_e_line + '\n')
 
-if __name__ == "__main__": 
-
-	test_l1 = 'test.pcm-en.en'
-	test_l2 = 'test.pcm-en.pcm'
-	train_l1 = 'train_tune.pcm-en.en'
-	train_l2 = 'train_tune.pcm-en.pcm'
-	
-	with open(corpus_l1, 'r') as f,\
-		open(corpus_l2, 'r') as e,\
-		open(test_l1, 'w') as f_test,\
-		open(test_l2, 'w') as e_test,\
-		open(train_l1, 'w') as f_train,\
-		open(train_l2, 'w') as e_train: 
-
-		remove_test_sentences()
-
 ## There's a lot of abstractions missing from here right now but I need to finish my project. God no go shame us |\
 
 ## Remove duplicate translations from the test set because they may affect BLEU score computation
